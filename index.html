@@ -2,46 +2,26 @@
 
 <html>
 
-
- 
-
-<body>
-
-<button id="testme">Click Me</button>
-
-<script>
-
-function runMe(){
-
-window.parent.postMessage(
-
-{configuration:{data: 
-
-{containerCommand:'openNewTab', context:'https://google.com', containerOptions:'_blank'} } },
-
-"*"
-
-);
-
-console.log('test me');
-
-}
-
-
- 
-
-document.getElementById("testme").addEventListener("click", function() {
-
-runMe();
-
-});
-
-</script>
-
+    <body>
+        <button id="testme">Click Me</button>
+            <script>
+                function runMe(){
+                    window.parent.postMessage(
+                        {
+                            configuration:
+                            {data:
+                                {
+                                    containerCommand:'openNewTab', context:'https://google.com', containerOptions:'_blank'
+                                }
+                            } 
+                         },
+                         "*");
+                         console.log('test me');
+                        }
+                        document.getElementById("testme").addEventListener("click", function() 
+                        {
+                            runMe();
+                        });
+            </script>
 </body>
-
-
-
- 
-
 </html>
