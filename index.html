@@ -1,21 +1,47 @@
+<!DOCTYPE html>
+
 <html>
 
-<head> </head>
+
+ 
 
 <body>
-    <h4> </h4>
-    " The Front Porch Mission Vision & Values video is available on YouTube "
-    <b>
-        <a href="https://www.youtube.com/watch?v=ctdb-PQPBgU&feature=youtu.be/ " target="_blank">here</a>
-    </b>
-    ". Please watch – and share! "
-    <br>
-    <br>
-    " Want your own copy of the Mission, Vision, and Values? You can download 8 ½ X 11 posters "
-    <b>
-        <a href="https://drive.google.com/file/d/1VV0xhlTgCy0ZCq1VunJVwKROcyofp1OV/preview" target="_blank">here</a>
-    </b>
-    ", in 8 languages! "
+
+<button id="testme">Click Me</button>
+
+<script>
+
+function runMe(){
+
+window.parent.postMessage(
+
+{configuration:{data: 
+
+{containerCommand:'openNewTab', context:'https://google.com', containerOptions:'_blank'} } },
+
+"*"
+
+);
+
+console.log('test me');
+
+}
+
+
+ 
+
+document.getElementById("testme").addEventListener("click", function() {
+
+runMe();
+
+});
+
+</script>
+
 </body>
+
+
+
+ 
 
 </html>
